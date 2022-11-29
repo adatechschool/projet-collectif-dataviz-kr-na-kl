@@ -1,0 +1,16 @@
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+svg {
+    margin-top: 50px;
+    
+}
+
+#FR-04 {
+    fill: aqua;
+}
