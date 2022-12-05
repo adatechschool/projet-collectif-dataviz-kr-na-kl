@@ -1,8 +1,8 @@
 
 div {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: left;
     
 }
 
@@ -14,3 +14,41 @@ svg {
 #FR-04 {
     fill: aqua;
 }
+
+#info-SVG {
+    display: right;
+    justify-content: right;
+    align-items: right;
+    position: relative;
+
+}
+
+
+
+
+
+/*
+/*infobulle
+#FR-44 {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  
+#FR-44 .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Position the tooltip 
+    position: absolute;
+    z-index: 1;
+}
+  
+#FR-44:hover .tooltiptext {
+    visibility: visible;
+  } */
