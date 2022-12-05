@@ -14,3 +14,8 @@ svg {
 #FR-04 {
     fill: aqua;
 }
+
+input {
+    justify-content: right;
+    align-items: bottom;
+}

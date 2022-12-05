@@ -1,3 +1,15 @@
+let currentDate = document.getElementById("inputDate").valueAsDate;
+currentDate = new Date();
+console.log(currentDate);
+
+let button = document.getElementById("button");
+button.onclick = updateInputDate()
+
+let inputDate = document.getElementById("inputDate").valueAsDate;
+console.log(inputDate);
+
+let convertedDate = inputDate.toISOString().replace(/T.*/,'').split('-').reverse().join('-')
+console.log(convertedDate);
 
 // returns a Promise and with Json we transform the date into reusable data .
 // In case of error we error we catch the error 
@@ -10,7 +22,6 @@ function getAllDepartments(date) {
             console.log(`error on api: ${error}`)
         })
 }
-
 
 // The function gets all the departments and iterates
 // line 32 gets the each department numbers 
@@ -29,25 +40,25 @@ getAllDepartments('10-04-2021').then(departments => {
 })
 */
 
-getAllDepartments('10-04-2021').then(departments => {
-    departments.forEach(department => {//console.log(department)
+getAllDepartments(convertedDate).then(departments => {
+    departments.forEach(department => {
+        console.log(department)
         let elementId = `FR-${department.dep}`;
         console.log(elementId)
         let depHtml = document.getElementById(elementId);
         if(depHtml) {
-            depHtml.style.fill = covidColors(department.hosp);
+            depHtml.style.fill = covidColors(department.pos);
         }
     })
     
 })
 
-// this function gives the different colors according to the number of the hospitalisation
-/*
+// this function gives the different colors according to the number of covid cases
+
 function covidColors (numberOfCases) {
     console.log(numberOfCases)
     let color = '#CECECE'
     if (numberOfCases < 50) {
-
         color = '#007f5f'
     }
     else if (numberOfCases < 100) {
@@ -82,40 +93,6 @@ function covidColors (numberOfCases) {
     }
     else {
         color = '#6a040f'
-
     }
     return color
-}
-*/
-
-function covidColors (numberOfCases) {
-    console.log(numberOfCases)
-    switch(numberOfCases){
-        case (numberOfCases>0 && numberOfCases<=50): color = '#007f5f';
-            break;
-        case (numberOfCases>50 && numberOfCases<=100): color = '#2b9348';
-            break;
-        case (numberOfCases>100 && numberOfCases<=150): color = '#80b918';
-            break;
-        case (numberOfCases>150 && numberOfCases<=200): color = '#aacc00';
-            break;
-        case (numberOfCases>200 && numberOfCases<=250): color = '#2d4d70';
-            break;
-        case (numberOfCases>250 && numberOfCases<=300): color = '#eeef20';
-            break;        
-        case (numberOfCases>300 && numberOfCases<=350): color = '#ffba08';
-            break;
-        case (numberOfCases>350 && numberOfCases<=400): color = '#faa307';
-            break;
-        case (numberOfCases>400 && numberOfCases<=500): color = '#e85d04';
-            break;
-        case (numberOfCases>500 && numberOfCases<=600): color = '#dc2f02';
-            break;
-        case (numberOfCases>600 && numberOfCases<=700): color = '#9d0208';
-            break;
-        case (numberOfCases)>700: color = '#9d0208';
-            break;
-        default: color = '#CECECE';
-   }
-   return color;
 }
