@@ -1,19 +1,19 @@
-/*let currentDate = document.getElementById("inputDate").valueAsDate;
-currentDate = new Date();
-console.log(currentDate);
-
 let button = document.getElementById("button");
-button.onclick = updateInputDate()
 
-let inputDate = document.getElementById("inputDate").valueAsDate;
-console.log(inputDate);
+function getValue() {
+    // Gets the value of the input element
+    inputDate = document.getElementById("inputDate").value;
+    console.log("la date entrée est : " + inputDate);
+    // Returns its value
+    return inputDate;
+}
 
-let convertedDate = inputDate.toISOString().replace(/T.'*'/,'').split('-').reverse().join('-')
-console.log(convertedDate)
-*/
-// returns a Promise and with Json we transform the date into reusable data .
-// In case of error we error we catch the error 
-
+button.onclick = function () {
+    let myNewDate = getValue();
+    fetchValuesWith(myNewDate);
+}
+// Returns a Promise, Json transforms the result in reusable data
+// Then it catches errors
 function getAllDepartments(date) {
     return fetch(`https://coronavirusapifr.herokuapp.com/data/departements-by-date/${date}`)
         .then(result => {
@@ -23,38 +23,22 @@ function getAllDepartments(date) {
         })
 }
 
-// The function gets all the departments and iterates
-// line 32 gets the each department numbers 
-// line 35 gets each departments numbers from html documet it is linked to line 32
-// line 36 fills the colors according the hospitalisation cases 
-/*
-getAllDepartments('10-04-2021').then(departments => {
-    for(department of departments) {
-        let elementId = `FR-${department.dep}`;
-        console.log(elementId)
-        let depHtml = document.getElementById(elementId);
-        if(depHtml) {
-            depHtml.style.fill = covidColors(department.hosp);
-        }
-    }
-})
-*/
-
-getAllDepartments("10-04-2021").then(departments => {
-    departments.forEach(department => {
-        console.log(department)
-        let elementId = `FR-${department.dep}`;
-        console.log(elementId)
-        let depHtml = document.getElementById(elementId);
-        if(depHtml) {
-            depHtml.style.fill = covidColors(department.pos);
-        }
+// This function gets the number of positive covid cases for each French department :
+function fetchValuesWith(date) {
+    getAllDepartments(date).then(departments => {
+        departments.forEach(department => {
+            console.log(department)
+            let elementId = `FR-${department.dep}`;
+            console.log(elementId)
+            let depHtml = document.getElementById(elementId);
+            if(depHtml) {
+                depHtml.style.fill = covidColors(department.pos);
+            }
+        })
     })
-    
-})
+}
 
-// this function gives the different colors according to the number of the hospitalisation
-
+// This function attributes a color code depending on the number of covid cases :
 function covidColors (numberOfCases) {
     console.log(numberOfCases)
     let color = '#CECECE'
@@ -71,10 +55,10 @@ function covidColors (numberOfCases) {
         color = '#aacc00'
     }
     else if (numberOfCases < 250) {
-        color = '#2d4d70'
+       color = '#eeef20'
     }
     else if (numberOfCases < 300) {
-        color = '#eeef20'
+        color = '#fcfc5f'
     }
     else if (numberOfCases < 350) {
         color = '#ffba08'
@@ -82,54 +66,24 @@ function covidColors (numberOfCases) {
     else if (numberOfCases < 400) {
         color = '#faa307'
     }
-    else if (numberOfCases < 500) {
+    else if (numberOfCases < 450) {
         color = '#e85d04'
     }
-    else if (numberOfCases < 600) {
+    else if (numberOfCases < 500) {
         color = '#dc2f02'
     }
-    else if (numberOfCases < 700) {
+    else if (numberOfCases < 550) {
         color = '#9d0208'
     }
-    else {
+    else if (numberOfCases > 550) {
         color = '#6a040f'
+    }
+    else {
+        color = '#CECECE'
     }
     return color
 }
-/*
 
-function covidColors (numberOfCases) {
-    console.log(numberOfCases)
-    switch(numberOfCases){
-        case (numberOfCases>0 && numberOfCases<=50): color = '#007f5f';
-            break;
-        case (numberOfCases>50 && numberOfCases<=100): color = '#2b9348';
-            break;
-        case (numberOfCases>100 && numberOfCases<=150): color = '#80b918';
-            break;
-        case (numberOfCases>150 && numberOfCases<=200): color = '#aacc00';
-            break;
-        case (numberOfCases>200 && numberOfCases<=250): color = '#2d4d70';
-            break;
-        case (numberOfCases>250 && numberOfCases<=300): color = '#eeef20';
-            break;        
-        case (numberOfCases>300 && numberOfCases<=350): color = '#ffba08';
-            break;
-        case (numberOfCases>350 && numberOfCases<=400): color = '#faa307';
-            break;
-        case (numberOfCases>400 && numberOfCases<=500): color = '#e85d04';
-            break;
-        case (numberOfCases>500 && numberOfCases<=600): color = '#dc2f02';
-            break;
-        case (numberOfCases>600 && numberOfCases<=700): color = '#9d0208';
-            break;
-        case (numberOfCases)>700: color = '#9d0208';
-            break;
-        default: color = '#CECECE';
-   }
-   return color;
-}
-*/
 function toggleDataCreation() {
     //This function allow to reuse the result of the fetch and create an array of objects with the departments and positive cases
     toggleData = new Array();                                     //Creation of the array
@@ -178,4 +132,3 @@ function toggleDataCreation() {
     });
   }
   SVGToolTip();                                                 //Call of the function
-  
