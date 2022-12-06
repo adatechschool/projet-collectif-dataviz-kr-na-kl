@@ -15,7 +15,6 @@ svg {
     fill: aqua;
 }
 
-<<<<<<< HEAD
 /*Toggle css*/
 
 #info-SVG {
@@ -40,9 +39,7 @@ svg {
     transform: translate(-50%, 1.5em);
   }
   
-=======
 input {
     justify-content: right;
     align-items: bottom;
 }
->>>>>>> cec371348b5b45b8b3333b9cd783fe3e2f534f4b

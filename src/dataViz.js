@@ -1,4 +1,4 @@
-let currentDate = document.getElementById("inputDate").valueAsDate;
+/*let currentDate = document.getElementById("inputDate").valueAsDate;
 currentDate = new Date();
 console.log(currentDate);
 
@@ -8,9 +8,9 @@ button.onclick = updateInputDate()
 let inputDate = document.getElementById("inputDate").valueAsDate;
 console.log(inputDate);
 
-let convertedDate = inputDate.toISOString().replace(/T.*/,'').split('-').reverse().join('-')
-console.log(convertedDate);
-
+let convertedDate = inputDate.toISOString().replace(/T.'*'/,'').split('-').reverse().join('-')
+console.log(convertedDate)
+*/
 // returns a Promise and with Json we transform the date into reusable data .
 // In case of error we error we catch the error 
 
@@ -40,7 +40,7 @@ getAllDepartments('10-04-2021').then(departments => {
 })
 */
 
-getAllDepartments(convertedDate).then(departments => {
+getAllDepartments("10-04-2021").then(departments => {
     departments.forEach(department => {
         console.log(department)
         let elementId = `FR-${department.dep}`;
