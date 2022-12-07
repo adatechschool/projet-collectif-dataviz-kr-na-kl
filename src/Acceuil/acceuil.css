@@ -1,0 +1,88 @@
+html,
+body,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding: 2em 10em; /*Marge verticale*/
+  background-color: black; /*Couleur de fond*/
+  text-align: center; /*texte centré*/
+  opacity: 0.75;
+}
+div.centercolumn {
+  color: grey;
+  font-size: xx-large;
+  font-family: "Courier New", Courier, monospace;
+  font-size-adjust: initial;
+}
+body {
+  background-color: whitesmoke/*#fdd8d0*/;
+}
+
+#carreLeft {
+  height: 35em;
+  width: 25%;
+  background: lightgray;
+  position: absolute;
+  top: 8em;
+  left: 4%;
+  opacity: 0.5;
+  word-wrap: break-word;
+  border-radius: 5%;
+
+}
+
+#carreCenter {
+  height: 35em;
+  width: 34%;
+  background: lightgray;
+  position: absolute;
+  top: 8em;
+  left: 33%;
+  opacity: 0.5;
+  word-wrap: break-word;
+  border-radius: 5%;
+
+}
+#carreRigth {
+  height: 35em;
+  width: 25%;
+  background: lightgray;
+  position: absolute;
+  top: 8em;
+  left: 70%;
+  opacity: 0.5;
+  word-wrap: break-word;
+  border-radius: 5%;
+
+}
+#logoGitHub {
+  height: 1em;
+  width: auto;
+}
+
+#logoAda {
+  height: 1em;
+  width: auto;
+}
+
+
+#titleLeft {
+  text-transform: capitalize;  text-align: center;
+  white-space: normal;
+
+}
+#titleCenter {
+  text-transform: capitalize;
+  text-align: center;
+  white-space: normal;
+
+}
+#titleRight {
+  text-transform: capitalize;
+  text-align: center;
+  white-space: normal;
+
+}
