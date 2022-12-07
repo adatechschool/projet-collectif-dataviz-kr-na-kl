@@ -148,9 +148,12 @@ button:hover {
   .titleContainer {
     width: 100vw;
   }
+  .legendTitle{
+    font-size: 1.5rem;
+  }
   .legend {
     margin-top: 0;
-    font-size: 16px;
+    font-size: 1.3rem;
   }
   .svgFrance {
     padding: 1rem;
