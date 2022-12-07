@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  font-family: "Playfair Display", serif;
+  font-family: "Din Condensed", serif;
   width: 100vw;
   height: 100vh;
   margin: 0;
@@ -57,7 +57,7 @@ svg {
   margin-top: 0;
   margin-bottom: 0;
   padding: 2vh;
-  font-size: 1.5rem;
+  font-size: 3rem;
 }
 
 .titleContainer {
@@ -172,7 +172,7 @@ button:hover {
   flex: 1 0 auto;
   margin: 0;
   padding: 0.25em 0.5em;
-  border: 4px solid orange;
+  border: 4px solid rgb(255, 0, 0);
   border-radius: 0.5em;
   font-size: 1.25em;
   color: #333;
