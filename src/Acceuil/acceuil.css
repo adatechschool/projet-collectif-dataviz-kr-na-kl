@@ -9,7 +9,7 @@ header {
   background-color: #29291B; /*Couleur de fond*/
   text-align: center; /*texte centré*/
   opacity: 1;
-  height: 12vh;
+  height: 10vh;
 }
 
 div.centercolumn {
@@ -17,7 +17,7 @@ div.centercolumn {
   padding: 2vh; /*Marge verticale*/
   /*font-size: xx-large;*/
   font-family: "Din Condensed", serif;
-  font-size: 2.2rem;
+  font-size: 3rem;
 }
 
 body {
