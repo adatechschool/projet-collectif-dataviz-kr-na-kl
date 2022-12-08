@@ -66,24 +66,7 @@ div.centercolumn {
   font-family: "Din Condensed", serif;
   font-size: 3rem;
 }
-/*
-#back {
-  font-family: inherit;
-  font-weight: bold;
-  border-radius: 20px;
-  border: none;
-  cursor: pointer;
-  font-size: 12px;
-  margin: 1rem 0;
-  padding: 0.5rem 1rem;
-  text-align: center;
-  text-transform: uppercase;
-  white-space: nowrap;
-  position: absolute;
-  left: 2%;
-  top: 2%;
-  background-color: #c9cec6	;
-}*/
+
 #homeButton{
   width: 2%;
   position: absolute;
@@ -92,25 +75,8 @@ div.centercolumn {
   mask: #c9cec6;
 
 }
-/*
-.title {
-  text-align: center;
-  color: white;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding: 2vh;
-  font-size: 3rem;
-}
 
-.titleContainer {
-  width: 100vh;
-  background-color: black;
-  margin-top: 0;
-  height: 10vh;
-}
-*/
 /* colored cubes on the legend of the map  */
-
 .s1 {
   background-color: #007f5f; /* Cas Covid Positifs < 50 */
 }
