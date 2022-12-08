@@ -40,7 +40,7 @@ function fetchValuesWith(date) {
 // This function attributes a color code depending on the number of covid cases :
 function covidColors(numberOfCases) {
   //console.log(numberOfCases);
-  let color = "#CECECE";
+  let color = "#746c6c	";
   if (numberOfCases < 50) {
     color = "#007f5f";
   } else if (numberOfCases < 100) {
@@ -66,7 +66,7 @@ function covidColors(numberOfCases) {
   } else if (numberOfCases > 550) {
     color = "#6a040f";
   } else {
-    color = "#CECECE";
+    color = "#746c6c	";
   }
   return color;
 }

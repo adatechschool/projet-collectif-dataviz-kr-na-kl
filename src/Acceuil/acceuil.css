@@ -6,7 +6,7 @@ p {
 }
 
 header {
-  background-color: rgb(3, 3, 3); /*Couleur de fond*/
+  background-color: #29291B; /*Couleur de fond*/
   text-align: center; /*texte centré*/
   opacity: 1;
   height: 10vh;
@@ -15,13 +15,13 @@ header {
 div.centercolumn {
   color: rgb(250, 250, 250);
   padding: 2vh; /*Marge verticale*/
-  font-size: xx-large;
+  /*font-size: xx-large;*/
   font-family: "Din Condensed", serif;
-  font-size: 3rem;
+  font-size: 2.2rem;
 }
 
 body {
-  background-image: url("img/mask-background.jpg");
+  background-image: url("img/pexels-polina-tankilevitch-7337914.jpg");
   background-size: 100%;
 }
 
@@ -91,9 +91,20 @@ button {
   text-transform: uppercase;
   white-space: nowrap;
   position: absolute;
-  left: 30%;
+  left: 33%;
+  background-color: #c9cec6	;
+}
+#projet{
+
+  left: 31%;
 }
 
+.linkedin{
+  font-family: inherit;
+  font-weight:500;
+  text-decoration-color: black;
+  color: black;
+}
 #logoGitHub {
   height: 1em;
   width: auto;
@@ -102,4 +113,9 @@ button {
 #logoAda {
   height: 1em;
   width: auto;
+}
+
+b{
+  font-size: larger;
+
 }

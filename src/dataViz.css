@@ -1,5 +1,5 @@
 html {
-  width: 100vw;
+ width: 100vw;
   height: 100vh;
 }
 
@@ -9,6 +9,7 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
+  background-color: #EEEFE8;
 }
 
 .container {
@@ -22,7 +23,7 @@ body {
 
 svg {
   margin-left: 25%;
-  fill: #cecece;
+  fill: #746c6c;
 }
 
 .svgFrance {
@@ -51,6 +52,21 @@ svg {
   grid-template-columns: 1fr 7fr;
 }
 
+header {
+  background-color: #29291B;	/*rgb(3, 3, 3); /*Couleur de fond*/
+  text-align: center; /*texte centré*/
+  opacity: 1;
+  height: 10vh;
+}
+
+div.centercolumn {
+  color: rgb(250, 250, 250);
+  padding: 2vh; /*Marge verticale*/
+  /*font-size: xx-large;*/
+  font-family: "Din Condensed", serif;
+  font-size: 3rem;
+}
+/*
 .title {
   text-align: center;
   color: white;
@@ -66,7 +82,7 @@ svg {
   margin-top: 0;
   height: 10vh;
 }
-
+*/
 /* colored cubes on the legend of the map  */
 
 .s1 {
