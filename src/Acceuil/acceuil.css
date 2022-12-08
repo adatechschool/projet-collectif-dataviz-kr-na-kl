@@ -9,7 +9,7 @@ header {
   background-color: #29291B; /*Couleur de fond*/
   text-align: center; /*texte centré*/
   opacity: 1;
-  height: 10vh;
+  height: 12vh;
 }
 
 div.centercolumn {
@@ -106,15 +106,17 @@ button {
   color: black;
 }
 #logoGitHub {
-  height: 1em;
+  height: 1.5em;
   width: auto;
+  align-items:inherit;
+  float: right;
+
 }
 
 #logoAda {
   height: 1em;
   width: auto;
 }
-
 b{
   font-size: larger;
 
