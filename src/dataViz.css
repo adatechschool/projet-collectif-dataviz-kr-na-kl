@@ -1,5 +1,5 @@
 html {
- width: 100vw;
+  width: 100vw;
   height: 100vh;
 }
 
@@ -9,7 +9,7 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  background-color: #EEEFE8;
+  background-color: #eeefe8;
 }
 
 .container {
@@ -53,7 +53,7 @@ svg {
 }
 
 header {
-  background-color: #29291B;	/*rgb(3, 3, 3); /*Couleur de fond*/
+  background-color: #29291b; /*rgb(3, 3, 3); /*Couleur de fond*/
   text-align: center; /*texte centré*/
   opacity: 1;
   height: 10vh;
@@ -62,18 +62,16 @@ header {
 div.centercolumn {
   color: rgb(250, 250, 250);
   padding: 2vh; /*Marge verticale*/
-  /*font-size: xx-large;*/
   font-family: "Din Condensed", serif;
   font-size: 3rem;
 }
 
-#homeButton{
+#homeButton {
   width: 2%;
   position: absolute;
   left: 2%;
   top: 3%;
   mask: #c9cec6;
-
 }
 
 /* colored cubes on the legend of the map  */
@@ -156,7 +154,7 @@ button:hover {
   .titleContainer {
     width: 100vw;
   }
-  .legendTitle{
+  .legendTitle {
     font-size: 1.5rem;
   }
   .legend {

@@ -7,7 +7,7 @@ p {
 }
 
 header {
-  background-color: #29291B; /*Couleur de fond*/
+  background-color: #29291b; /*Couleur de fond*/
   text-align: center; /*texte centré*/
   opacity: 1;
   height: 10vh;
@@ -16,7 +16,6 @@ header {
 div.centercolumn {
   color: rgb(250, 250, 250);
   padding: 2vh; /*Marge verticale*/
-  /*font-size: xx-large;*/
   font-family: "Din Condensed", serif;
   font-size: 3rem;
 }
@@ -30,16 +29,15 @@ body {
   text-transform: capitalize;
   text-align: center;
   white-space: normal;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
-  
 }
 
 #titleRight {
   text-transform: capitalize;
   text-align: center;
   white-space: normal;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
 }
 
@@ -55,7 +53,7 @@ body {
   opacity: 1;
   word-wrap: break-word;
   border-radius: 5%;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 300;
   text-align: justify;
   line-height: 30px;
@@ -73,7 +71,7 @@ body {
   opacity: 1;
   word-wrap: break-word;
   border-radius: 5%;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 300;
   text-align: justify;
   line-height: 30px;
@@ -93,15 +91,15 @@ button {
   white-space: nowrap;
   position: absolute;
   left: 33%;
-  background-color: #c9cec6	;
+  background-color: #c9cec6;
 }
-#projet{
+#projet {
   left: 31%;
 }
 
-.linkedin{
+.linkedin {
   font-family: inherit;
-  font-weight:500;
+  font-weight: 500;
   text-decoration-color: black;
   color: black;
 }
@@ -109,16 +107,14 @@ button {
 #logoGitHub {
   height: 1.5em;
   width: auto;
-  align-items:inherit;
+  align-items: inherit;
   float: right;
-
 }
 
 #logoAda {
   height: 1em;
   width: auto;
 }
-
-b{
+b {
   font-size: larger;
 }
